@@ -1,0 +1,37 @@
+<br>
+<h1>Shopping Cart</h1>
+<ng-container>
+    <p>
+        You have {{shoppingCartItemCount}} items in your shopping cart.
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cart">
+                <td>
+                    <div [style.backgroundImage]="'url('+ item['imageurl']+')'" class="thumbnail" ></div>
+                </td>
+                <td>{{item['product_name']}}</td>
+                <td>{{item['quantity']}}</td>
+                <td>{{item['amount']*item['quantity']  | currency:"&#8377;"}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>{{totalPrice | currency:"&#8377;"}}</th>
+            </tr>
+        </tfoot>
+    </table>
+    <a routerLink="/check-out" class="btn btn-primary">Check Out</a>
+    <br><br>
+</ng-container>

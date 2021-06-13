@@ -1,0 +1,18 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+body { padding-top : 80px;}
+
+.navbar-light .navbar-brand{
+    color: rgb(127, 207, 7);
+}
+
+.list-group-item.active{
+    background-color: rgb(127, 207, 7);;
+    border-color: rgb(127, 207, 7);;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: rgb(127, 207, 7);;
+    border-color: rgb(127, 207, 7);;
+}

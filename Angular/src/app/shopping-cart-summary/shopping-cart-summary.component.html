@@ -1,0 +1,16 @@
+<div class="card" >
+    <div class="card-body">
+      <h4 class="card-title">Order Summary</h4>
+      <p class="card-text">You have {{itemcount}} items in your shopping cart.</p>
+      <table class="table">
+          <tr *ngFor="let item of cart">
+              <td>{{item['quantity']}} x {{item['product_name']}}</td>
+              <td>{{item['amount']*item['quantity']  | currency:"&#8377;"}}</td>
+          </tr>
+          <tr>
+              <th>Total</th>
+              <th>{{totalPrice | currency:"&#8377;"}}</th>
+          </tr>
+      </table>
+    </div>
+  </div>
